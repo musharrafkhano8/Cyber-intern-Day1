@@ -1,0 +1,11 @@
+Nmap scan report for 192.168.56.1
+
+
+Host is up..
+Not shown: 995 closed tcp ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+5357/tcp open  wsdapi
+7070/tcp open  realserver
