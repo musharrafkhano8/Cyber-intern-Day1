@@ -1,0 +1,29 @@
+ Port & Service Analysis
+
+1. 135/tcp (msrpc)**  
+   - Used for Microsoft RPC (Remote Procedure Call)  
+   - Often targeted in Windows RPC-related vulnerabilities  
+   - Risk: Can be exploited in remote code execution attacks if not patched
+
+2. 139/tcp (netbios-ssn)**  
+   - NetBIOS Session Service  
+   - Used in Windows file/printer sharing  
+   - Risk: Information leakage, vulnerable to NetBIOS enumeration
+
+3. 445/tcp (microsoft-ds)**  
+   - SMB over TCP  
+   - Common attack vector for WannaCry & EternalBlue exploits  
+   - Risk: High, if SMBv1 is enabled and unpatched
+
+4. 5357/tcp (wsdapi)**  
+   - Web Services for Devices (used for device discovery)  
+   - Risk: Usually low, but may expose networked devices
+
+5. 7070/tcp (realserver)**  
+   - Used by RealNetworks RealServer (streaming)  
+   - Risk: Uncommon service; ensure it's intended and up-to-date
+
+ Summary of Risks
+- High-risk ports: 445, 135
+- Medium: 139
+- Recommendation: Disable unnecessary services, patch OS, and use firewall rules to block external access.
